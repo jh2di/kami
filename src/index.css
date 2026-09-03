@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    touch-action: manipulation;
+    background-color: #0a0e1a;
+  }
+}
+
+.font-gaegu {
+  font-family: 'Gaegu', cursive, sans-serif;
+}
+
+.font-dodum {
+  font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif;
+}
+
+/* Immersive UI Grid & Atmospheric Patterns */
+.grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 24px rgba(250, 204, 21, 1));
+  }
+}
+
+.heart-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes kamiBlink {
+  0%, 90%, 100% {
+    height: 12px;
+  }
+  95% {
+    height: 2px;
+  }
+}
+
+.kami-eye {
+  animation: kamiBlink 4s infinite ease-in-out;
+}
+
+.kami-box-glow {
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.45);
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px rgba(250, 204, 21, 0.45);
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Clean printing styles for Appointment Certificate */
+@media print {
+  header, button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

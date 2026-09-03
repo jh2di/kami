@@ -1,0 +1,6 @@
+{
+  "name": "마음빛 탐사대: 사라진 선택빛",
+  "description": "초등학교 1·2학년을 위한 인터랙티브 3D 웹게임 - 《인공지능이 뽑은 반장》 연계 카미봇 수업 1차시 도입 활동",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
